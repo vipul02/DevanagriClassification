@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
+from flask_wtf.csrf import CSRFProtect
 from predict import predict_class
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 @app.route('/', method=['POST', 'GET'])
 def home(request):

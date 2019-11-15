@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Devanagari</title>
 	<meta charset='utf-8'>
@@ -16,6 +16,7 @@
 		<div class="col-sm-6">
 			<div class="col-md-6">
 				<form method="POST" id='canvasForm'>
+					<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 					<input type="hidden" name="canvasData" id="image">
 					<input type="submit" name="submit" value="submit" onclick="save()">
 				</form>
