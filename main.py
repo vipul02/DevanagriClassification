@@ -5,7 +5,7 @@ from predict import predict_class
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 
-@app.route('/', method=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def home(request):
 	error = None
 	if request.method == 'POST':
