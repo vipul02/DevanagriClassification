@@ -1,4 +1,4 @@
-function save(){
+function save() {
     var canvas = document.getElementById('canvas');
     destinationCanvas = document.createElement("canvas");
     destinationCanvas.width = canvas.width;
@@ -14,6 +14,6 @@ function save(){
     destCtx.drawImage(canvas, 0, 0);
 
     //finally use the destinationCanvas.toDataURL() method to get the desired output;
-    document.getElementById('my_hidden').value = destinationCanvas.toDataURL('image/jpeg', 1.0);
-    document.forms["form1"].submit();
+    document.getElementById('image').value = destinationCanvas.toDataURL('image/jpeg', 1.0);
+    document.forms["canvasForm"].submit();
 }
