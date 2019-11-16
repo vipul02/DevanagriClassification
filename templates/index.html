@@ -8,6 +8,10 @@
 </head>
 <body>
 	<div class="container">
+		<div class="row intro"> 
+			<h2 class="intro">Devanagari Lipi Classification Using Convolution Neural Networks(CNN) implemented as Flask App and running live on Heroku Server with gUnicorn as backend server.</h2><br>
+			<h3 class="intro ins">कुछ लिखो हिन्दी में</h3>
+		</div>
 		<div class="row"> 
 			<canvas class="myCanvas" id="canvas"></canvas>
 		</div>
@@ -27,6 +31,9 @@
 		<div class="row">
 			<div class="col"></div> 
 			<div class="col predicted">
+				{% if predicted_class == 0 %}
+					<h3>Prediction: {{ predicted_class }}</h3>
+				{% endif %}
 				{% if predicted_class %}
 					<h3>Prediction: {{ predicted_class }}</h3>
 				{% endif %}

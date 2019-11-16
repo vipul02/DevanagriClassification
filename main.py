@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def home():
 	if request.method == 'POST':
-		img = request.POST.get('canvasData')
+		img = request.form['canvasData']
 		predicted_class = predict_class(img)
 		return render_template('index.html', predicted_class=predicted_class)
 	else:
